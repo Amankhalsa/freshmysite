@@ -25,7 +25,7 @@
 
           <div class="col-lg-6" data-aos="fade-up">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=" image of testimonial 1 ">
+              <img src="{{asset('frontend/assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt=" image of testimonial 1 ">
               <h3>Saul Goodman</h3>
               <h4>Ceo &amp; Founder</h4>
               <p>
@@ -38,7 +38,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item mt-4 mt-lg-0">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=" image of testimonials-2">
+              <img src="{{asset('frontend/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt=" image of testimonials-2">
               <h3>Sara Wilsson</h3>
               <h4>Designer</h4>
               <p>
@@ -51,7 +51,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="testimonial-item mt-4">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="image of testimonials-3">
+              <img src="{{asset('frontend/assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="image of testimonials-3">
               <h3>Jena Karlis</h3>
               <h4>Store Owner</h4>
               <p>
@@ -64,7 +64,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="image of testimonials-4">
+              <img src="{{asset('frontend/assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="image of testimonials-4">
               <h3>Matt Brandon</h3>
               <h4>Freelancer</h4>
               <p>
@@ -77,7 +77,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="testimonial-item mt-4">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="image of testimonials-5">
+              <img src="{{asset('frontend/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="image of testimonials-5">
               <h3>John Larson</h3>
               <h4>Entrepreneur</h4>
               <p>
@@ -90,7 +90,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
             <div class="testimonial-item mt-4">
-              <img src="assets/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="image of testimonials-6">
+              <img src="{{asset('frontend/assets/img/testimonials/testimonials-6.jpg')}}" class="testimonial-img" alt="image of testimonials-6">
               <h3>Emily Harison</h3>
               <h4>Store Owner</h4>
               <p>
