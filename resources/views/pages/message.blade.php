@@ -35,12 +35,14 @@
     </tr>
   </thead>
   <tbody>
-
+    <button style="margin-bottom: 10px" class="btn btn-primary delete_all" data-url="">Delete All Selected</button>
         <!-- @php( $i =1) -->
 @foreach($messages as $msg)
     <tr>
  <!-- <th scope="row">{{$i++}}</th> -->
- <td scope="row" width="10%">{{$loop->index+1}}</td>
+ <td scope="row" width="10%">
+  <input type="checkbox" class="sub_chk" data-id="{{$msg->id}}">
+  {{$loop->index+1}}</td>
 
  
   <td width="10%">{{ ucwords($msg->name)}}
