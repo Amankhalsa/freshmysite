@@ -8,7 +8,9 @@
 <div class="col-md-12">
 
 
-
+<div class="col-md-4">
+  <span class="badge badge-danger"><h3>Total Message : {{count($allmessages)}} </h3></span>
+</div>
 
 <a href="{{route('add_contact')}}" class="float-right text-decoration-none">
     <button class="btn btn-info"> Add Message </button></a><br><br>
