@@ -6,13 +6,9 @@
               <div class="container">
             <div class="row">
 <div class="col-md-12">
-  <div class="row">
-    <div class="col-md-6">
-      <H5 class="badge- badge-pill badge-danger py-3"> Total : {{count($messages)}} Visitor Contact  Messages </H5></div>
 
-    </div>
-  </div>
-  <div >
+
+
 
 <a href="{{route('add_contact')}}" class="float-right text-decoration-none">
     <button class="btn btn-info"> Add Message </button></a><br><br>
@@ -23,7 +19,7 @@
 
 <!-- end message  -->
 
-    <table class="table table-hover">
+    <table class="table table-hover" width='100%'>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -35,13 +31,12 @@
     </tr>
   </thead>
   <tbody>
-    <button style="margin-bottom: 10px" class="btn btn-primary delete_all" data-url="">Delete All Selected</button>
-        <!-- @php( $i =1) -->
+
+   
 @foreach($messages as $msg)
     <tr>
- <!-- <th scope="row">{{$i++}}</th> -->
+
  <td scope="row" width="10%">
-  <input type="checkbox" class="sub_chk" data-id="{{$msg->id}}">
   {{$loop->index+1}}</td>
 
  
@@ -63,7 +58,7 @@
 </table>
 
 
-           
+{{ $messages->links() }} 
              
               </div>
   

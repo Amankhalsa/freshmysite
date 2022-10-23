@@ -128,7 +128,7 @@ return redirect('/')->with($notification);
 
     public function admin_msg(){
 
-            $messages= ContactForm::latest()->get();
+            $messages= ContactForm::latest()->paginate(15);
         return view('pages.message' , compact('messages'));
     }
  
