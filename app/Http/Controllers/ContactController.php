@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Jobs\ContactJob;
 use App\Models\Contact;
 use App\Models\ContactForm;
 
@@ -37,7 +39,7 @@ class ContactController extends Controller
     }
 
     public function store_Contacts(Request $request){
-        Contact::insert([
+      Contact::insert([
             'address'=>$request->address,
             'email'=>$request->email,
             'phone'=>$request->phone,
@@ -46,6 +48,8 @@ class ContactController extends Controller
 
 
         ]);
+
+ 
 return redirect()->route('Admin_contact')->with('success','Contact inserted successfully');
     }
 
@@ -101,7 +105,7 @@ return redirect()->route('Admin_contact')->with($notification);
 
     public function user_message(Request $resuest){
 
-        ContactForm::insert([
+  $content  = ContactForm::create([
             'name'=>$resuest->name,
             'email'=>$resuest->email,
             'subject'=>$resuest->subject,
@@ -110,6 +114,10 @@ return redirect()->route('Admin_contact')->with($notification);
         
 
         ]);
+        dispatch(new ContactJob($content ));
+        
+
+    
                 $notification = array(
         'message' => 'Your Message send successfully',
         'alert-type' => 'success'

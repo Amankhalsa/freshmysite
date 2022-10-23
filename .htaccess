@@ -1,0 +1,29 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^amankhalsa.in$
+RewriteRule ^(.*)$ https://amankhalsa.in/$1 [R=301,L]
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+    
+    RewriteEngine On
+    
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ ^$1 [N]
+
+    RewriteCond %{REQUEST_URI} (\.\w+$) [NC]
+    RewriteRule ^(.*)$ public/$1 
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ server.php
+
+</IfModule>
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:ocaGxBZ6ME
+ErrorDocument 404 /404.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE ocaGxBZ6ME:ERRORPAGEID
+
+
+Redirect 301 /home/ https://amankhalsa.in/
+

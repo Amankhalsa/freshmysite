@@ -37,19 +37,25 @@
                 <div class="col-lg-4 info">
                   <i class="icofont-google-map"></i>
                   <h4>Location:</h4>
+                  @if(isset($contacts->address))
                   <p>{{ $contacts->address}}</p>
+                  @endif
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-envelope"></i>
                   <h4>Email:</h4>
+@if(isset( $contacts->email))
                   <p>{{ $contacts->email}}</p>
+                  @endif
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-phone"></i>
                   <h4>Call:</h4>
+                  @if(isset($contacts->phone))
                   <p>{{ $contacts->phone}}</p>
+                  @endif
                 </div>
               </div>
             </div>
