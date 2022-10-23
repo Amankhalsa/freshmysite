@@ -9,7 +9,7 @@
 <a href="{{route('add_contact')}}" class="float-right text-decoration-none">
     <button class="btn btn-info"> Add Message </button></a><br><br>
 
-<div >
+
 
 <!-- message  -->
 
@@ -21,7 +21,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">subject</th>
+      <th scope="col">Email</th>
       <th scope="col">Message</th>
       <th scope="col">Action</th>
 
@@ -36,10 +36,12 @@
  <td scope="row" width="10%">{{$loop->index+1}}</td>
 
  
-  <td width="10%">{{ ucwords($msg->name)}} </td>
-  <td width="20%">{{ ucwords($msg->email  )}} </td>
+  <td width="10%">{{ ucwords($msg->name)}}
+  </td>
+  <td width="10%">{{ ucwords($msg->email  )}}  <br>
+  <span class="text-danger">  Created at 	{{Carbon\Carbon::parse($msg->created_at)->diffForHumans()}} </span></td>
   <td width="20%">{{ ucwords($msg->subject )}} </td> 
-  <td width="20%">{{ ucwords(Str::limit( $msg->message ,300,$end='....') )}} </td>   
+  {{-- <td width="10%">{{ ucwords(Str::limit( $msg->message ,100,$end='....') )}} </td>    --}}
 
   <td width="10%"><a href="{{url('message/delete/'.$msg->id)}}" 
  class="btn btn-danger">Del</a> </td>  
@@ -53,7 +55,7 @@
 
 
            
-                </div>
+             
               </div>
   
 
