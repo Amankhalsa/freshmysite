@@ -6,6 +6,14 @@
               <div class="container">
             <div class="row">
 <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-6">
+      <H5 class="badge- badge-pill badge-danger py-3"> Total : {{count($messages)}} Visitor Contact  Messages </H5></div>
+
+    </div>
+  </div>
+  <div >
+
 <a href="{{route('add_contact')}}" class="float-right text-decoration-none">
     <button class="btn btn-info"> Add Message </button></a><br><br>
 
@@ -14,7 +22,6 @@
 <!-- message  -->
 
 <!-- end message  -->
-                  <div >All messages</div>
 
     <table class="table table-hover">
   <thead>
