@@ -160,7 +160,7 @@ Route::get('/view/picture/', [PictureController::class,'view_picture'])->name('v
 
 Route::get('/add/picture/', [PictureController::class,'add_picture'])->name('add.picture');
 
-Route::get('/store/image-category/', [PictureController::class,'store_img_cat'])->name('store.picture_cat');
+Route::post('/store/image-category/', [PictureController::class,'store_img_cat'])->name('store.picture_cat');
 Route::get('/edit/image-category/{id}', [PictureController::class,'edit_img_cat'])->name('edit.image_category');
 
 Route::get('/delete/picture/{id}', [PictureController::class,'delete_img_cat'])->name('delete_multipic');
