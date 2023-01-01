@@ -88,6 +88,9 @@ class PictureController extends Controller
                    
                     $old_image =$img->image;
                     // unlink($old_image);
+
+                    $imagePath = public_path('upload/images/'. $old_image);
+                    unlink($imagePath);
                     ImageGallery::find($id)->delete();
                     return redirect()->route('view.picture');
             
