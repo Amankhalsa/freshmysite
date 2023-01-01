@@ -169,20 +169,20 @@ return redirect()->back()->with( $notification);
     foreach($image as $multi_img){
 
    
-   $name_gen= hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
-   Image::make($multi_img)->save('public/image/Multi/'.$name_gen);
-//   ->resize(1000,720)  //can use this  for resize 
-   $last_img='public/image/Multi/'.$name_gen;
+        $name_gen= hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
+        Image::make($multi_img)->save('public/image/Multi/'.$name_gen);
+        //   ->resize(1000,720)  //can use this  for resize 
+        $last_img='public/image/Multi/'.$name_gen;
 
 
-Multipic::insert([
+            Multipic::insert([
 
-'image'=>$last_img,
-'created_at'=>Carbon::now()
+            'image'=>$last_img,
+            'created_at'=>Carbon::now()
 
 
-]);
- }
+            ]);
+            }
 
  $notification = array(
     'message' => 'Multiple images inserted successfully',

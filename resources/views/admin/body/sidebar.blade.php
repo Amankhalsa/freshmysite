@@ -81,6 +81,18 @@
         <span class="nav-text">Our Team</span>
         
       </a>
+    </li>   
+    <li  class="active" >
+      <a class="sidenav-item-link" href="{{route('add.picture')}}">
+        <span class="nav-text">Add Image</span>
+        
+      </a>
+    </li> 
+    <li  class="active" >
+      <a class="sidenav-item-link" href="{{route('view.picture')}}">
+        <span class="nav-text">Image Gallery</span>
+        
+      </a>
     </li>              
 
                         
@@ -118,8 +130,8 @@
         
       </a>
     </li>
-                        
-                        
+        
+              
                     
                           
                  
