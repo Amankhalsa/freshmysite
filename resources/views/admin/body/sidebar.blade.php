@@ -83,7 +83,7 @@
       </a>
     </li>   
     <li  class="active" >
-      <a class="sidenav-item-link" href="{{route('add.picture')}}">
+      {{-- <a class="sidenav-item-link" href="{{route('add.picture')}}"> --}}
         <span class="nav-text">Add Image</span>
         
       </a>
