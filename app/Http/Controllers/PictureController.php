@@ -66,7 +66,7 @@ class PictureController extends Controller
              
                 $img_name = $name_gen.'.'.$img_ext;
                 
-                $up_location = 'upload/images/';
+                $up_location = 'public/upload/images/';
                 $last_img = $up_location.$img_name; 
 
 
